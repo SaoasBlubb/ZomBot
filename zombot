@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Scan IPv4 range
+zmap --bandwidth=10M --target-port=22 --max-targets=4294967295 --output-file=$PWD/result.txt
+
+
+
+exit 0
