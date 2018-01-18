@@ -2,10 +2,10 @@
 
 ## Requirements
 
-You need to install _zmap_ :
+You need to install _masscan_ :
 
 ```bash
-sudo aptitude install zmap
+sudo aptitude install masscan
 ```
 
 ## ToDo
