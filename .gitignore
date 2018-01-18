@@ -1,6 +1,8 @@
-# Created by https://www.gitignore.io/api/c,git,c++,perl,macos,linux,windows
-
 .ftpconfig
+result.txt
+result.txt.bak
+
+# Created by https://www.gitignore.io/api/c,git,c++,perl,macos,linux,windows
 
 ### C ###
 # Prerequisites
