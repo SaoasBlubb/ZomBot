@@ -4,7 +4,7 @@
 
 You need to install _zmap_ :
 
-```
+```bash
 sudo aptitude install zmap
 ```
 
