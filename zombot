@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Scan IPv4 range
-zmap --bandwidth=10M --target-port=22 --max-targets=4294967295 --output-file=$PWD/result.txt
+masscan 0.0.0.0/0 -p22 --exclude 255.255.255.255 > $PWD/result.txt
 
 
 
