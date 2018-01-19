@@ -1,8 +1,12 @@
 #!/bin/bash
 
 # Scan IPv4 range
-masscan 0.0.0.0/0 -p22 --exclude 255.255.255.255 > $PWD/result.txt
+masscan 0.0.0.0/0 -p22 --exclude 255.255.255.255 > $PWD/result.txt.tmp
 
+# Parse result.txt.tmp
+awk '{print $6}' result.txt.tmp > result.txt
+
+# Brute force
 
 
 exit 0
