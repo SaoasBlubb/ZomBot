@@ -14,5 +14,4 @@ sudo aptitude install masscan hydra
 
 ## ToDo
 
-* **Parse** the succeeded brute force
 * **Put** zombie credentials in a "_parc manager_"
