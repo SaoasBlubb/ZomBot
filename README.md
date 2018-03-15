@@ -15,3 +15,4 @@ sudo aptitude install masscan hydra
 ## ToDo
 
 * **Put** zombie credentials in a "_parc manager_"
+* **"Cluestering"** to make load balancing
